@@ -4,7 +4,7 @@
 (defn palin?
     "Checks if a number is palindrome"
     [n]
-    (= (list n) (reverse (list n))))
+    (= (str n) (apply str (reverse (str n)))))
 (println (reduce max
             (filter palin?
                 (mapcat
