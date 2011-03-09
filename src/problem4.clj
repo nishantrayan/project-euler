@@ -1,6 +1,4 @@
 (ns problem4)
-;(defn find-palindrome
-;    "finds the largest palindrome product of two 3-digit numbers"
 (defn palin?
     "Checks if a number is palindrome"
     [n]
