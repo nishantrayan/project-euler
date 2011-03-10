@@ -6,6 +6,6 @@
 (println (reduce max
             (filter palin?
                 (mapcat
-                    (fn [n] (map (partial * n) (range n 999)))
-                    (range 100 999)))))
+                    (fn [n] (map (partial * n) (range n 1000)))
+                    (range 100 1000)))))
 
