@@ -2,14 +2,14 @@
 (defn count-factors
     "returns the number of unique factors that the number has"
     [n]
-    (let [limit (int (Math/floor (Math/sqrt n)))]
+    (let [sq (Math/sqrt n) limit (int (Math/floor sq))]
         (loop [current 1 count-divisors 0]
             (if (> current limit)
                 count-divisors
                 (recur (inc current)
                         (+ count-divisors
                             (if (zero? (mod n current))
-                                (if (= current (Math/sqrt n))
+                                (if (= current sq)
                                     1 2)
                                 0)))))))
 (assert (= (count-factors 5) 2))
