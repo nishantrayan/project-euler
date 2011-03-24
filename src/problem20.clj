@@ -32,7 +32,7 @@
     "adds the numbers after normalizing their lengths"
     [num1-str num2-str]
     (let [max-len (max (count num1-str) (count num2-str))
-            norm-fn (fn [x](apply str (apply str (repeat (- max-len (count x)) "0")) x))
+            norm-fn #(apply str (apply str (repeat (- max-len (count %)) "0")) %)
             num1-norm (norm-fn num1-str)
             num2-norm (norm-fn num2-str)]
         (add-numbers num1-norm num2-norm)))
